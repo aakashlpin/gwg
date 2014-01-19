@@ -1,0 +1,237 @@
+$icon-font-path: "/bower_components/sass-bootstrap/fonts/";
+$font-family-sans-serif: "tablet-gothic-narrow", Arial, Helvetica, sans-serif;
+$font-family-serif: "museo-slab", serif;
+$font-family-base: $font-family-sans-serif;
+$border-radius-base: 0;
+$border-radius-large: 0;
+$border-radius-small: 0;
+$badge-border-radius: 0;
+@import 'sass-bootstrap/lib/bootstrap';
+@import 'font-awesome/font-awesome';
+
+.browsehappy {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+body {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  overflow-x: hidden;
+}
+
+a {
+  cursor: pointer;
+}
+
+p {
+  font-family: $font-family-serif;
+}
+
+img.bg {
+  /* Set rules to fill background */
+  min-height: 100%;
+  min-width: 1024px;
+
+  /* Set up proportionate scaling */
+  width: 100%;
+  height: auto;
+
+  /* Set up positioning */
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  z-index: -1;
+}
+
+@media screen and (max-width: 1024px) { /* Specific to this particular image */
+  img.bg {
+    left: 50%;
+    margin-left: -512px;   /* 50% */
+  }
+}
+
+.usp {
+  margin-bottom: 60px;
+  > * {
+    text-align: center;
+    font-size: 120px;
+
+    font-weight: 900;
+    text-transform: uppercase;
+    color: #fff;
+  }
+}
+
+.mb-30 {
+  margin-bottom: 30px;
+}
+
+.l-h-list {
+  @extend .clearfix;
+
+  > .item {
+    float: left;
+    margin-right: 46px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.l-v-list {
+  > .item {
+    margin-bottom: 3rem;
+  }
+}
+
+.list-faces {
+  .item {
+    margin-bottom: 25px;
+
+  }
+
+  a {
+    display: block;
+    height: 85px;
+    width: 85px;
+  }
+
+  img {
+    border-radius: 50%;
+    height: 80px; width: 80px;
+    margin: 0 auto;
+    transition: 0.1s all ease-in;
+
+    &:hover {
+      height: 85px; width: 85px;
+    }
+  }
+}
+
+.right-sidebar {
+  transform: translateX(100%);
+  position: fixed;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  background: rgba(0,0,0,0.5);
+  transition: all .2s cubic-bezier(.16, .26, .24, 1);
+
+  &.open {
+    transform: translateX(0);
+  }
+}
+
+.is--pushed-left {
+  #core {
+    transition: all .2s cubic-bezier(.16, .26, .24, 1);
+    margin-left: 0;
+    margin-top: 150px;
+    width: 50%;
+  }
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 30px 0 30px 20px;
+  background: #999;
+  background: rgba(255, 255, 255, 0.6);
+  height: 100px;
+
+  .heading {
+    margin: 0;
+    font-weight: 800;
+  }
+}
+
+.right-sidebar-guru {
+  position: relative;
+  height: 100%;
+
+  .header {
+    background: #999;
+  }
+
+  .guru-avatar {
+    height: 128px;
+    width: 128px;
+    border-radius: 50%;
+    position: absolute;
+    right: 25px;
+    top: -12px;
+  }
+
+  .guru-body {
+    padding: 130px 20px 0;
+    p {
+      font-style: italic;
+      font-size: 20px;
+      font-weight: bold;
+      text-shadow: 0 1px 2px rgba(0,0,0,1);
+      color: #fff;
+    }
+  }
+
+  .guru-reserve {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 70px;
+    width: 100%;
+
+    button {
+      font-size: 30px;
+      font-weight: 800;
+
+    }
+  }
+
+  .guru-actions {
+    .fa {
+      font-size: 5rem;
+      color: #fff;
+    }
+  }
+}
+
+.list-courses {
+  margin-bottom: 40px;
+  .course-name {
+    font-family: $font-family-serif;
+    font-size: 20px;
+    font-weight: 300;
+  }
+
+  .label {
+    font-size: 18px;
+
+  }
+}
+
+.btn-block {
+  height: 100%;
+  line-height: 1.5;
+}
+
+.uc {
+  text-transform: uppercase;
+}
+
+.fa-play-circle-o:hover {
+  @extend .fa-play-circle;
+
+}
+
+.fa-calendar-o:hover {
+  @extend .fa-calendar;
+
+}
