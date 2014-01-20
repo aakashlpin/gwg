@@ -1,4 +1,6 @@
-var GuitarWithGuru = function () {};
+var GuitarWithGuru = function () {
+  'use strict';
+};
 
 _.extend(GuitarWithGuru.prototype, {
   isRightSidebarVisible: false,
@@ -42,9 +44,9 @@ _.extend(GuitarWithGuru.prototype, {
     $('body').toggleClass('is--pushed-left');
     $('#usp').toggle();
     $('#header').toggle();
-/*    if (this.isRightSidebarVisible) {
-      this.startVideo();
-    }*/
+    /*    if (this.isRightSidebarVisible) {
+     this.startVideo();
+     }*/
 
   },
   startVideo: function() {
@@ -65,28 +67,28 @@ window.onload = function() {
 };
 
 /*// 3. This function creates an <iframe> (and YouTube player)
-//    after the API code downloads.
-var player;
-function onYouTubeIframeAPIReady() {
-  player = new YT.Player('player', {
-    height: '300',
-    width: '100%',
-    videoId: 'NavVfpp-1L4',
-    events: {
-      'onReady': onPlayerReady,
-      'onStateChange': onPlayerStateChange
-    }
-  });
-}
+ //    after the API code downloads.
+ var player;
+ function onYouTubeIframeAPIReady() {
+ player = new YT.Player('player', {
+ height: '300',
+ width: '100%',
+ videoId: 'NavVfpp-1L4',
+ events: {
+ 'onReady': onPlayerReady,
+ 'onStateChange': onPlayerStateChange
+ }
+ });
+ }
 
-function onPlayerReady(event) {
+ function onPlayerReady(event) {
 
-}
+ }
 
-function onPlayerStateChange(event) {
+ function onPlayerStateChange(event) {
 
-}
+ }
 
-function stopVideo() {
-  player.stopVideo();
-}*/
+ function stopVideo() {
+ player.stopVideo();
+ }*/
